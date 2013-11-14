@@ -1,0 +1,46 @@
+<script src="lib/underscore.js"></script>
+<style>
+  .move-0, .move-1, .move-2, .move-3, .move-4 {
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+    border: 2px solid #ccc;
+    text-align: center;
+    background: #eee;
+
+  }
+  .move-0 {
+    color: red;
+  }
+  .move-1 {
+    color: green;
+  }
+  .move-2 {
+    color: blue;
+  }
+  .move-3 {
+    color: orange;
+  }
+  .move-4 {
+    color: black;
+  }
+</style>
+
+
+<script>
+  var moves = [
+    'High Five',
+    'Hug',
+    'low five',
+    'regular shake',
+    'fist bump'
+  ];
+
+  var new_order = _.shuffle(moves);
+
+  for (i = 0; i < moves.length; i++) {
+    document.write('<div class="move-' + i + '">' + new_order[i] + '</div>'); 
+  }
+  
+</script>
+
+
